@@ -1,320 +1,330 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Клименко Егор</title>
     <style>
-        html,
-        body,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        sup,
-        tt,
-        var,
-        b,
-        u,
-        i,
-        center,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        aside,
-        canvas,
-        details,
-        embed,
-        figure,
-        figcaption,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        output,
-        ruby,
-        section,
-        summary,
-        time,
-        mark,
-        audio,
-        video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
 
+      html {
+        box-sizing: border-box;
+      }
 
-        html {
-            box-sizing: border-box;
-        }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
 
-        *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
+      /* Переменные */
+      :root {
+        --baseFontFamily: "Ubuntu";
+        --baseFontSize: 18px;
+        --smFontSize: 14px;
+        --baseLineHeight: 27x;
+        --smLineHeight: 27px;
+        --baseSpacing: 0px;
+        --smSpacing: 27px;
+        --wrapperWidth: 800px;
+        --baseRadius: 3px;
+        --baseAnimationSpeed: 200ms;
+        --activeAnimationSpeed: 100ms;
+        --bodyColor: #fff;
+        --txtPrimaryColor: #2f3337;
+        --hoverTxtColor: #2490fd;
+        --txtHintColor: #787e87;
+        --primaryColor: #2490fd;
+        --successColor: #2dffa7;
+        --dangerColor: #ef4565;
+        --warningColor: #ff8e3c;
+        accent-color: var(--primaryColor);
+      }
 
-        /* Переменные */
-        :root {
-            --baseFontFamily: 'Ubuntu';
-            --baseFontSize: 18px;
-            --smFontSize: 14px;
-            --baseLineHeight: 27x;
-            --smLineHeight: 27px;
-            --baseSpacing: 0px;
-            --smSpacing: 27px;
-            --wrapperWidth: 800px;
-            --baseRadius: 3px;
-            --baseAnimationSpeed: 200ms;
-            --activeAnimationSpeed: 100ms;
-            --bodyColor: #fff;
-            --txtPrimaryColor: #2f3337;
-            --hoverTxtColor: #2490fd;
-            --txtHintColor: #787e87;
-            --primaryColor: #2490fd;
-            --successColor: #2dffa7;
-            --dangerColor: #ef4565;
-            --warningColor: #ff8e3c;
-            accent-color: var(--primaryColor);
-        }
+      :focus-visible {
+        outline-color: var(--primaryColor);
+        outline-style: solid;
+      }
 
-        :focus-visible {
-            outline-color: var(--primaryColor);
-            outline-style: solid;
-        }
+      /* Основные стили */
+      html,
+      body {
+        line-height: var(--baseLineHeight);
+        font-family: var(--baseFontFamily);
+        font-size: var(--baseFontSize);
+        color: var(--txtPrimaryColor);
+        background: var(--bodyColor);
+      }
 
-        /* Основные стили */
-        html,
-        body {
-            line-height: var(--baseLineHeight);
-            font-family: var(--baseFontFamily);
-            font-size: var(--baseFontSize);
-            color: var(--txtPrimaryColor);
-            background: var(--bodyColor);
-        }
+      p,
+      .block,
+      .content {
+        display: block;
+        width: 100%;
+      }
 
-        p,
-        .block,
-        .content {
-            display: block;
-            width: 100%;
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 0 var(--smSpacing);
+        font-weight: normal;
+      }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0 0 var(--smSpacing);
-            font-weight: normal;
-        }
+      h1 {
+        font-size: 24px;
+        line-height: 18px;
+      }
 
-        h1 {
-            font-size: 24px;
-            line-height: 18px;
-        }
+      h2 {
+        font-size: 22px;
+        line-height: 28px;
+      }
 
-        h2 {
-            font-size: 22px;
-            line-height: 28px;
-        }
+      h3 {
+        font-size: 20px;
+        line-height: 24px;
+      }
 
-        h3 {
-            font-size: 20px;
-            line-height: 24px;
-        }
+      h4 {
+        font-size: 18px;
+        line-height: 24px;
+      }
 
-        h4 {
-            font-size: 18px;
-            line-height: 24px;
-        }
+      h5 {
+        font-size: 17px;
+        line-height: 24px;
+      }
 
-        h5 {
-            font-size: 17px;
-            line-height: 24px;
-        }
+      h6 {
+        font-size: 16px;
+        line-height: 22px;
+      }
 
-        h6 {
-            font-size: 16px;
-            line-height: 22px;
-        }
+      p {
+        margin: var(--smSpacing) 0;
+      }
 
-        p {
-            margin: var(--smSpacing) 0;
-        }
+      em {
+        font-style: italic;
+      }
 
-        em {
-            font-style: italic;
-        }
+      ins {
+        color: var(--txtPrimaryColor);
+        text-decoration: none;
+      }
 
-        ins {
-            color: var(--txtPrimaryColor);
-            text-decoration: none;
-        }
+      del {
+        color: var(--txtPrimaryColor);
+        text-decoration: none;
+      }
 
-        del {
-            color: var(--txtPrimaryColor);
-            text-decoration: none;
-        }
+      strong {
+        font-weight: 600;
+      }
 
-        strong {
-            font-weight: 600;
-        }
+      small {
+        font-size: var(--smFontSize);
+        line-height: var(--smLineHeight);
+      }
 
-        small {
-            font-size: var(--smFontSize);
-            line-height: var(--smLineHeight);
-        }
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        color: var(--txtPrimaryColor);
+        text-decoration: none;
+      }
 
-        a {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            color: var(--txtPrimaryColor);
-            text-decoration: none;
-        }
+      a:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primaryColor);
+        transform: rotateY(90deg);
+        transform-origin: 0 0;
+        transition:
+          height var(--baseAnimationSpeed),
+          transform var(--baseAnimationSpeed);
+      }
 
-        a:after {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primaryColor);
-            transform: rotateY(90deg);
-            transform-origin: 0 0;
-            transition: height var(--baseAnimationSpeed), transform var(--baseAnimationSpeed);
-        }
+      a:hover:after {
+        transform: rotateX(0deg);
+        transform-origin: left top;
+      }
 
-        a:hover:after {
-            transform: rotateX(0deg);
-            transform-origin: left top;
-        }
+      a:hover {
+        color: var(--hoverTxtColor);
+      }
 
-        a:hover {
-            color: var(--hoverTxtColor);
-        }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #ffff;
+      }
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #ffff;
-        }
+      .wrapper {
+        display: block;
+        width: var(--wrapperWidth);
+        margin-bottom: 130px;
+      }
 
-        .wrapper {
-            display: block;
-            width: var(--wrapperWidth);
-            margin-bottom: 130px;
-        }
+      .content > :first-child {
+        margin-top: 0;
+      }
 
-        .content> :first-child {
-            margin-top: 0;
-        }
-
-        .content> :last-child {
-            margin-bottom: 0;
-        }
+      .content > :last-child {
+        margin-bottom: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="wrapper">
+      <div class="content m-t-35 m-b-40">
+        <h1>Привет!</h1>
+        <p>Я Клименко Егор, разработчик ПО.</p>
 
-        <div class="content m-t-35 m-b-40">
-            <h1>Привет!</h1>
-            <p>Я Клименко Егор, разработчик ПО.</p>
+        <p>
+          Разрабатываю Web сервисы и использую Telegram с помощью
+          <a href="https://go.dev/" target="_blank" rel="noopener"
+            ><strong>Go.</strong></a
+          >
+        </p>
 
-            <p>Разрабатываю Web сервисы и работаю с Telegram с
-                помощью
-                <a href="https://go.dev/" target="_blank" rel="noopener"><strong>Go.</strong></a>
-            </p>
+        <p>
+          GRPC, Rest API, Telegram боты, Web Fullstack - со всем этим я работаю.
+        </p>
 
-            <p>GRPC, Rest API, Telegram боты, Web Fullstack - со всем этим я работаю.</p>
+        <p></p>
+      </div>
 
-            <p></p>
-        </div>
+      <div class="content m-t-35 m-b-40">
+        <a
+          href="https://habr.com/ru/users/mo0Oonnn/publications/articles/"
+          target="_blank"
+          rel="noopener"
+        >
+          <strong>Habr</strong>
+        </a>
+        |
 
-        <div class="content m-t-35 m-b-40">
-            <a href="https://habr.com/ru/users/mo0Oonnn/publications/articles/" target="_blank" rel="noopener">
-                <strong>Habr</strong>
-            </a> |
+        <a
+          href="https://github.com/eg0rklimenko"
+          target="_blank"
+          rel="noopener"
+        >
+          <strong>Github</strong>
+        </a>
+        |
 
-
-            <a href="https://github.com/eg0rklimenko" target="_blank" rel="noopener">
-                <strong>Github</strong>
-            </a> |
-
-
-
-            <a href="https://t.me/klimenkoeg0r" target="_blank" rel="noopener">
-                <strong>Telegram</strong>
-            </a>
-
-        </div>
+        <a href="https://t.me/klimenkoeg0r" target="_blank" rel="noopener">
+          <strong>Telegram</strong>
+        </a>
+      </div>
     </main>
-</body>
-
+  </body>
 </html>
+
